@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty | EduFeedback</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        EduFeedback
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="feedback.html">Feedback</a></li>
+
+            <li><a href="faculty.html" class="active">Faculty</a></li>
+
+            <li><a href="reports.html">Reports</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- Banner -->
+
+<section class="faculty-banner">
+
+<h1>Meet Our Faculty</h1>
+
+<p>
+
+Dedicated educators committed to delivering quality education.
+
+</p>
+
+</section>
+
+<!-- Search -->
+
+<section class="container">
+
+<div class="card">
+
+<h2 style="text-align:center;margin-bottom:20px;">🔍 Search Faculty</h2>
+
+<input
+type="text"
+id="facultySearch"
+placeholder="Search by faculty name or department..."
+style="width:100%;padding:15px;border-radius:12px;border:none;">
+
+</div>
+
+</section>
+
+<!-- Faculty Cards -->
+
+<section class="faculty-container">
+
+<div class="faculty-card">
+
+<img src="https://i.pravatar.cc/400?img=12" alt="Dr. Ramesh Kumar">
+
+<div class="faculty-info">
+
+<h2>Dr. Ramesh Kumar</h2>
+
+<p>💻 Computer Science Engineering</p>
+
+<p>📘 Data Structures</p>
+
+<p>🎓 Ph.D. in Computer Science</p>
+
+<p>🏆 Experience: 12 Years</p>
+
+<div class="rating">★★★★★</div>
+
+</div>
+
+</div>
+
+<div class="faculty-card">
+
+<img src="https://i.pravatar.cc/400?img=47" alt="Mrs. Priya Sharma">
+
+<div class="faculty-info">
+
+<h2>Mrs. Priya Sharma</h2>
+
+<p>🌐 Information Technology</p>
+
+<p>📘 Web Development</p>
+
+<p>🎓 M.Tech</p>
+
+<p>🏆 Experience: 9 Years</p>
+
+<div class="rating">★★★★☆</div>
+
+</div>
+
+</div>
+
+<div class="faculty-card">
+
+<img src="https://i.pravatar.cc/400?img=15" alt="Mr. Arjun Singh">
+
+<div class="faculty-info">
+
+<h2>Mr. Arjun Singh</h2>
+
+<p>📡 Electronics & Communication</p>
+
+<p>📘 Digital Electronics</p>
+
+<p>🎓 M.E.</p>
+
+<p>🏆 Experience: 10 Years</p>
+
+<div class="rating">★★★★★</div>
+
+</div>
+
+</div>
+
+<div class="faculty-card">
+
+<img src="https://i.pravatar.cc/400?img=32" alt="Dr. Meena Joseph">
+
+<div class="faculty-info">
+
+<h2>Dr. Meena Joseph</h2>
+
+<p>⚙ Mechanical Engineering</p>
+
+<p>📘 Thermodynamics</p>
+
+<p>🎓 Ph.D.</p>
+
+<p>🏆 Experience: 15 Years</p>
+
+<div class="rating">★★★★★</div>
+
+</div>
+
+</div>
+
+<div class="faculty-card">
+
+<img src="https://i.pravatar.cc/400?img=18" alt="Mr. Naveen Raj">
+
+<div class="faculty-info">
+
+<h2>Mr. Naveen Raj</h2>
+
+<p>🏗 Civil Engineering</p>
+
+<p>📘 Structural Analysis</p>
+
+<p>🎓 M.E.</p>
+
+<p>🏆 Experience: 8 Years</p>
+
+<div class="rating">★★★★☆</div>
+
+</div>
+
+</div>
+
+<div class="faculty-card">
+
+<img src="https://i.pravatar.cc/400?img=45" alt="Ms. Divya Thomas">
+
+<div class="faculty-info">
+
+<h2>Ms. Divya Thomas</h2>
+
+<p>⚡ Electrical Engineering</p>
+
+<p>📘 Power Systems</p>
+
+<p>🎓 M.Tech</p>
+
+<p>🏆 Experience: 7 Years</p>
+
+<div class="rating">★★★★☆</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Features -->
+
+<section class="container">
+
+<h2 class="section-title">
+
+Why Students Love Our Faculty
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🎯 Student-Centered Teaching</h3>
+
+<p>
+
+Interactive classroom sessions focused on practical learning and
+real-world applications.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💡 Industry Knowledge</h3>
+
+<p>
+
+Faculty members combine academic excellence with current industry
+practices.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚀 Career Guidance</h3>
+
+<p>
+
+Continuous mentoring, placement training and project support help
+students achieve their career goals.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 EduFeedback | Student Feedback Management System
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+const search=document.getElementById("facultySearch");
+
+search.addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+let cards=document.querySelectorAll(".faculty-card");
+
+cards.forEach(card=>{
+
+let text=card.innerText.toLowerCase();
+
+card.style.display=text.includes(value)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

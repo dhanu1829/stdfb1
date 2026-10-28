@@ -1,0 +1,320 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | EduFeedback</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">EduFeedback</div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Banner -->
+<section class="form-banner">
+    <h1>Student Feedback Portal</h1>
+    <p>Your feedback helps improve teaching quality and learning experience.</p>
+</section>
+
+<!-- Feedback Form -->
+<section class="container">
+
+    <form class="feedback-form" id="feedbackForm">
+
+        <h2>Course &amp; Faculty Evaluation</h2>
+
+        <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName"
+                   placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="registerNumber">Register Number</label>
+            <input type="text" id="registerNumber"
+                   placeholder="Enter Register Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="studentEmail">Email Address</label>
+            <input type="email" id="studentEmail"
+                   placeholder="student@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option>Computer Science Engineering</option>
+                <option>Information Technology</option>
+                <option>Electronics &amp; Communication</option>
+                <option>Electrical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>Civil Engineering</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="academicYear">Academic Year</label>
+            <select id="academicYear">
+                <option>First Year</option>
+                <option>Second Year</option>
+                <option>Third Year</option>
+                <option>Final Year</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="facultyName">Faculty Name</label>
+            <input type="text" id="facultyName"
+                   placeholder="Faculty Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Course Name</label>
+            <input type="text" id="subject"
+                   placeholder="Course Name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Teaching Effectiveness</label>
+            <div class="radio-group">
+                <label><input type="radio" name="teach" value="Excellent"> ⭐⭐⭐⭐⭐ Excellent</label>
+                <label><input type="radio" name="teach" value="Good"> ⭐⭐⭐⭐ Good</label>
+                <label><input type="radio" name="teach" value="Average"> ⭐⭐⭐ Average</label>
+                <label><input type="radio" name="teach" value="Fair"> ⭐⭐ Fair</label>
+                <label><input type="radio" name="teach" value="Poor"> ⭐ Poor</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Facilities Used</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="facilities" value="Smart Classroom"> Smart Classroom</label>
+                <label><input type="checkbox" name="facilities" value="Laboratory"> Laboratory</label>
+                <label><input type="checkbox" name="facilities" value="Library"> Library</label>
+                <label><input type="checkbox" name="facilities" value="Wi-Fi"> Wi-Fi</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Would you recommend this course?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="recommend" value="Yes"> Yes</label>
+                <label><input type="radio" name="recommend" value="No"> No</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Overall Rating (1–10)</label>
+            <input type="range" id="rating" min="1" max="10" value="8">
+            <output id="ratingValue">8</output>/10
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Feedback Comments</label>
+            <textarea id="comments" rows="6"
+                      placeholder="Share your valuable feedback..."
+                      required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="feedbackDate">Date</label>
+            <input type="date" id="feedbackDate">
+        </div>
+
+        <div class="form-group">
+            <label for="supportingDocument">Upload Supporting Document (Optional)</label>
+            <input type="file" id="supportingDocument">
+            <small>The file is not uploaded to the backend by this form.</small>
+        </div>
+
+        <p id="formMessage" role="status"></p>
+
+        <div class="btn-group">
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+            <button type="reset" class="reset-btn">Reset Form</button>
+        </div>
+
+    </form>
+</section>
+
+<!-- Feedback Guidelines -->
+<section class="container">
+    <h2 class="section-title">Feedback Guidelines</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🎯 Be Honest</h3>
+            <p>Provide genuine opinions that help improve education quality.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤝 Be Respectful</h3>
+            <p>Constructive feedback is more valuable than criticism without suggestions.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Help Us Improve</h3>
+            <p>Your ideas contribute to creating a better learning environment.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 EduFeedback | Student Feedback Management System</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const feedbackForm = document.getElementById("feedbackForm");
+    const formMessage = document.getElementById("formMessage");
+    const ratingInput = document.getElementById("rating");
+    const ratingValue = document.getElementById("ratingValue");
+    const dateInput = document.getElementById("feedbackDate");
+
+    // Display the selected rating.
+    ratingInput.addEventListener("input", function () {
+        ratingValue.textContent = ratingInput.value;
+    });
+
+    // Set today's date as the default.
+    dateInput.value = new Date().toISOString().slice(0, 10);
+
+    feedbackForm.addEventListener("reset", function () {
+        setTimeout(function () {
+            ratingValue.textContent = ratingInput.value;
+            dateInput.value = new Date().toISOString().slice(0, 10);
+            formMessage.textContent = "";
+        }, 0);
+    });
+
+    feedbackForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email =
+            document.getElementById("studentEmail").value.trim();
+
+        const facilities = Array.from(
+            feedbackForm.querySelectorAll(
+                'input[name="facilities"]:checked'
+            )
+        ).map(function (item) {
+            return item.value;
+        });
+
+        const feedback = {
+            studentName:
+                document.getElementById("studentName").value.trim(),
+
+            registerNumber:
+                document.getElementById("registerNumber").value.trim(),
+
+            studentEmail: email,
+            email: email,
+
+            department:
+                document.getElementById("department").value,
+
+            academicYear:
+                document.getElementById("academicYear").value,
+
+            facultyName:
+                document.getElementById("facultyName").value.trim(),
+
+            courseName:
+                document.getElementById("subject").value.trim(),
+
+            subject:
+                document.getElementById("subject").value.trim(),
+
+            rating: Number(ratingInput.value),
+            overallRating: Number(ratingInput.value),
+
+            comments:
+                document.getElementById("comments").value.trim(),
+
+            feedbackDate: dateInput.value,
+
+            facilitiesUsed: facilities.join(", "),
+
+            teachingEffectiveness:
+                feedbackForm.querySelector(
+                    'input[name="teach"]:checked'
+                )?.value || "",
+
+            recommendCourse:
+                feedbackForm.querySelector(
+                    'input[name="recommend"]:checked'
+                )?.value || ""
+        };
+
+        const submitButton =
+            feedbackForm.querySelector('button[type="submit"]');
+
+        submitButton.disabled = true;
+        formMessage.style.color = "";
+        formMessage.textContent = "Submitting feedback...";
+
+        try {
+            const response = await fetch(
+                "http://localhost:8080/api/feedback",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(feedback)
+                }
+            );
+
+            const responseText = await response.text();
+
+            if (!response.ok) {
+                throw new Error(
+                    "HTTP " + response.status + ": " + responseText
+                );
+            }
+
+            formMessage.style.color = "green";
+            formMessage.textContent =
+                "Success! Your feedback has been saved.";
+
+            feedbackForm.reset();
+
+        } catch (error) {
+            console.error("Feedback submission error:", error);
+
+            formMessage.style.color = "red";
+            formMessage.textContent =
+                "Could not save feedback. " + error.message;
+
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+```
